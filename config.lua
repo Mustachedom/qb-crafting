@@ -1,5 +1,5 @@
+QBCore = exports['qb-core']:GetCoreObject()
 Config = {
-    EnableSkillCheck = true,
     ImageBasePath = "nui://qb-inventory/html/images/",
     item_bench = {
         object = `prop_tool_bench02`,
@@ -8,16 +8,20 @@ Config = {
             {
                 item = 'lockpick',
                 xpRequired = 0,
+                maxCreate = 5,
                 xpGain = 1,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 22 },
                     { item = 'plastic',    amount = 32 }
-                }
+                },
             },
             {
                 item = 'screwdriverset',
                 xpRequired = 0,
                 xpGain = 2,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 30 },
                     { item = 'plastic',    amount = 42 }
@@ -27,6 +31,8 @@ Config = {
                 item = 'electronickit',
                 xpRequired = 0,
                 xpGain = 3,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 30 },
                     { item = 'plastic',    amount = 45 },
@@ -37,6 +43,8 @@ Config = {
                 item = 'radioscanner',
                 xpRequired = 0,
                 xpGain = 4,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'electronickit', amount = 2 },
                     { item = 'plastic',       amount = 52 },
@@ -47,6 +55,8 @@ Config = {
                 item = 'gatecrack',
                 xpRequired = 110,
                 xpGain = 5,
+                maxCreate = 2,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap',    amount = 10 },
                     { item = 'plastic',       amount = 50 },
@@ -59,6 +69,8 @@ Config = {
                 item = 'handcuffs',
                 xpRequired = 160,
                 xpGain = 6,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 36 },
                     { item = 'steel',      amount = 24 },
@@ -69,6 +81,8 @@ Config = {
                 item = 'repairkit',
                 xpRequired = 200,
                 xpGain = 7,
+                maxCreate = 3,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 32 },
                     { item = 'steel',      amount = 43 },
@@ -79,6 +93,8 @@ Config = {
                 item = 'pistol_ammo',
                 xpRequired = 250,
                 xpGain = 8,
+                maxCreate = 50,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 50 },
                     { item = 'steel',      amount = 37 },
@@ -89,6 +105,8 @@ Config = {
                 item = 'ironoxide',
                 xpRequired = 300,
                 xpGain = 9,
+                maxCreate = 50,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'iron',  amount = 60 },
                     { item = 'glass', amount = 30 }
@@ -98,6 +116,8 @@ Config = {
                 item = 'aluminumoxide',
                 xpRequired = 300,
                 xpGain = 10,
+                maxCreate = 50,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'aluminum', amount = 60 },
                     { item = 'glass',    amount = 30 }
@@ -107,6 +127,8 @@ Config = {
                 item = 'armor',
                 xpRequired = 350,
                 xpGain = 11,
+                maxCreate = 2,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'iron',     amount = 33 },
                     { item = 'steel',    amount = 44 },
@@ -118,6 +140,8 @@ Config = {
                 item = 'drill',
                 xpRequired = 1750,
                 xpGain = 12,
+                maxCreate = 2,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'iron',             amount = 50 },
                     { item = 'steel',            amount = 50 },
@@ -135,6 +159,8 @@ Config = {
                 item = 'clip_attachment',
                 xpRequired = 0,
                 xpGain = 10,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 140 },
                     { item = 'steel',      amount = 250 },
@@ -145,6 +171,8 @@ Config = {
                 item = 'suppressor_attachment',
                 xpRequired = 0,
                 xpGain = 10,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 165 },
                     { item = 'steel',      amount = 285 },
@@ -155,6 +183,8 @@ Config = {
                 item = 'drum_attachment',
                 xpRequired = 0,
                 xpGain = 10,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 230 },
                     { item = 'steel',      amount = 365 },
@@ -165,6 +195,8 @@ Config = {
                 item = 'smallscope_attachment',
                 xpRequired = 0,
                 xpGain = 10,
+                maxCreate = 5,
+                minigame = 'easy',
                 requiredItems = {
                     { item = 'metalscrap', amount = 255 },
                     { item = 'steel',      amount = 390 },

@@ -1,25 +1,40 @@
 local Translations = {
+    progressbar = 'Creando %{item}',
+    failedMinigame = '¡Fallo en la creación! No superaste el minijuego.',
+    cancelledCrafting = 'Creación cancelada.',
     menus = {
-        header = 'Menú de crafteo',
-        pickupworkBench = 'Agarrar banco de trabajo',
-        entercraftAmount = 'Ingrese la cantidad:',
+        input = {
+            Header = 'Cantidad a crear',
+            submit = 'Confirmar',
+            amountLabel = 'Cantidad',
+            text = 'Introduce cantidad',
+        },
+        context = {
+            has = '🟢 X %{amount} %{item} <br>',
+            doesnt = '❌ X %{amount} %{item} <br>',
+            header = 'Creación',
+        },
     },
-    notifications = {
-        pickupBench = 'Has recogido el banco de trabajo.',
-        invalidAmount = 'El monto ingresado no es valido.',
-        invalidInput = 'La entrada no es válida.',
-        notenoughMaterials = "¡No tienes suficientes materiales!",
-        craftingCancelled = 'Crafteo cancelado.',
-        tablePlace = 'Su mesa de trabajo fue colocada.',
-        craftMessage = 'Ha creado un %s',
-        xpGain = 'Has ganado %d XP en %s',
-    }
+    pickedUp = '¡Has recogido tu mesa de trabajo!',
+    interacts = {
+        startCrafting = 'Usar mesa',
+        removeBench = 'Recoger mesa',
+    },
+    failedDist = {
+        warn = '^3 [ADVERTENCIA] ^7 Jugador ^7 (%{citizenid}) falló la verificación de distancia. ^1 (%{current}/3)',
+        kicked = 'Fuiste expulsado por fallar múltiples verificaciones de distancia. El personal ha sido notificado.',
+    },
+    xpGain = '¡Has ganado %{xp} de reputación %{xpType}!',
+    failedChecks = {
+        failedNoTable = 'No tienes una mesa para recoger',
+        tooFar = 'Estás demasiado lejos de la mesa de trabajo',
+        noItems = 'No tienes los materiales necesarios',
+        inUse = 'Ya tienes una mesa colocada',
+        notclose = 'No estás lo suficientemente cerca para colocar la mesa',
+    },
 }
 
-if GetConvar('qb_locale', 'en') == 'es' then
-    Lang = Locale:new({
-        phrases = Translations,
-        warnOnMissing = true,
-        fallbackLang = Lang,
-    })
-end
+Lang = Lang or Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})

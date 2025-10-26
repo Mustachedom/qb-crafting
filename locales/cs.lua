@@ -1,25 +1,40 @@
 local Translations = {
+    progressbar = 'Vyrábíš %{item}',
+    failedMinigame = 'Výroba selhala! Nepodařilo se ti minihru dokončit.',
+    cancelledCrafting = 'Výroba zrušena.',
     menus = {
-        header = 'Crafting Menu',
-        pickupworkBench = 'Zvednout Workbench',
-        entercraftAmount = 'Zadejte počet:',
+        input = {
+            Header = 'Množství k výrobě',
+            submit = 'Potvrdit',
+            amountLabel = 'Množství',
+            text = 'Zadej množství',
+        },
+        context = {
+            has = '🟢 X %{amount} %{item} <br>',
+            doesnt = '❌ X %{amount} %{item} <br>',
+            header = 'Výroba',
+        },
     },
-    notifications = {
-        pickupBench = 'Zvedl si workbench.',
-        invalidAmount = 'Špatný počet zadán',
-        invalidInput = 'Zadán neplatný vstup',
-        notenoughMaterials = "Nemáš dostatek materiálů!",
-        craftingCancelled = 'Přerušil si crafting',
-        tablePlace = 'Tvůj Workbench byl položen',
-        craftMessage = 'Vycraftil si %s',
-        xpGain = 'Získal si %d XP z %s',
-    }
+    pickedUp = 'Sebral jsi svůj pracovní stůl!',
+    interacts = {
+        startCrafting = 'Použij stůl',
+        removeBench = 'Sebrat stůl',
+    },
+    failedDist = {
+        warn = '^3 [VAROVÁNÍ] ^7 Hráč ^7 (%{citizenid}) selhal při kontrole vzdálenosti. ^1 (%{current}/3)',
+        kicked = 'Byl jsi vyhozen za opakované selhání kontrol vzdálenosti, ohlášeno administrátorům.',
+    },
+    xpGain = 'Získal jsi %{xp} reputace %{xpType}!',
+    failedChecks = {
+        failedNoTable = 'Nemáš žádný stůl k sebrání',
+        tooFar = 'Jsi příliš daleko od pracovního stolu',
+        noItems = 'Nemáš potřebné předměty k výrobě',
+        inUse = 'Už máš pracovní stůl venku',
+        notclose = 'Nejsi dost blízko k umístění stolu',
+    },
 }
 
-if GetConvar('qb_locale', 'en') == 'cs' then
-    Lang = Locale:new({
-        phrases = Translations,
-        warnOnMissing = true,
-        fallbackLang = Lang,
-    })
-end
+Lang = Lang or Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})
